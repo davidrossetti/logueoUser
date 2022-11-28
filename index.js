@@ -1,7 +1,7 @@
 
 
-let usuarioConEmail=" ";
-let contrasenia=" ";
+let usuarioConEmail="usuario@gmail.com";
+let contrasenia="123456789";
 let usuarioTieneArroba=false;
 let usuarioContraseñaTieneNumero=false;
 let usuarioContraseñaTieneLongitudMayorANueve=false;
@@ -56,7 +56,7 @@ function validezNumeroEnContraseña(contrasenia) {
 }
 //Crea una contraseña nueva:
 function contraseñaNueva() {
-     contraseniaIngresada=prompt("ingrese contraseña");
+     contraseniaIngresada=prompt("ingrese contraseña").toLowerCase();
      validezLongitudContraseña(contraseniaIngresada);
      validezNumeroEnContraseña(contraseniaIngresada);
      if(usuarioContraseñaTieneNumero==true &&
@@ -69,7 +69,7 @@ function contraseñaNueva() {
 }
 //Crea un nuevo usuario:
 function usuarioNuevo(){
-  usuarioIngresado=prompt("ingrese usuario");
+  usuarioIngresado=prompt("ingrese usuario").toLowerCase();
   validacionArroba(usuarioIngresado);
   if(usuarioIngresado!=usuarioConEmail && usuarioTieneArroba==true){
     alert ("usuario creado con exito");
